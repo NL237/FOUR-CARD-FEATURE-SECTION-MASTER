@@ -6,30 +6,167 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Four card feature section</title>
   <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');    :root{
+      --Red: hsl(0, 78%, 62%);
+      --Cyan: hsl(180, 62%, 55%);
+      --Orange: hsl(34, 97%, 64%);
+      --Blue: hsl(212, 86%, 64%);
+      --Very-Dark-Blue: hsl(234, 12%, 34%);
+      --Grayish-Blue: hsl(229, 6%, 66%);
+      --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-height: 100vh;
+      background-color: var(--Very-Light-Gray);
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+    }
+    #global{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 85%;
+      margin: 0 auto;
+    }
+    #text{
+      text-align: center;
+      margin: 30px;
+    }
+    #text h1:nth-child(1){
+      color: var(--Grayish-Blue);
+      font-weight: 10;
+      font-size: 30px;
+    }
+    #text h1:nth-child(2){
+      color: var(--Very-Dark-Blue);
+      font-weight: 600;
+      margin-bottom: 16px;
+      font-size: 30px;
+    }
+    #text p{
+      color: var(--Grayish-Blue);
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    #tab{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    #tab div{
+      position: relative;
+      background-color: white;
+      padding: 20px;
+      height: 200px;
+      border-radius: 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    #tab div h3{
+      color: var(--Very-Dark-Blue);
+      margin-bottom: 6px;
+    }
+    #tab div p{
+      color: var(--Grayish-Blue);
+      margin-bottom: 15px;
+      font-size: 12px;
+      font-weight: 200;
+      line-height: 20px;
+    }
+    #tab div img{
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+    }
+    #tab .coltk{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #tab .sup{
+      border-top: 2px solid var(--Cyan);
+    }
+    #tab .team{
+      border-top: 2px solid var(--Red);
+    }
+    #tab .karma{
+      border-top: 2px solid var(--Orange);
+    }
+    #tab .calc{
+      border-top: 2px solid var(--Blue);
+    }
 
+    @media screen and (max-width: 700px) {
+      #global{width: 95%;}
+      #tab div{padding: 15px;}
+    }
+    @media screen and (max-width: 580px) {
+      #global{width: 95%;}
+      #text{ width: 100%;}
+      #text h1{
+        font-size: 25px;
+      }
+      #text p{
+        font-size: 14px;
+      }
+      #tab{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      #tab div{
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+  <div id="global">
+    <div id="text">
+      <h1>Reliable, efficient delivery</h1>
+      <h1>Powered by Technology</h1>
+      <p>Our Artificial Intelligence powered tools use millions of project data 
+      <br>  points to ensure that your project is successful</p>
+    </div>
+    <div id="tab">
+      <div class="sup">
+        <h3>Supervisor</h3>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="images/icon-supervisor.svg" alt="">
+      </div>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+      <section class="coltk">
+        <div class="team">
+          <h3>Team Builder</h3>
+          <p>Scans our talent network to create the optimal team for your project</p>
+          <img src="images/icon-team-builder.svg" alt="">
+        </div>
+        <div class="karma">
+          <h3>Karma</h3>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <img src="images/icon-karma.svg" alt="">
+        </div>
+      </section>
 
-  Supervisor
-  Monitors activity to identify project roadblocks
+      <div class="calc">
+        <h3>Calculator</h3>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img src="images/icon-calculator.svg" alt="">
+      </div>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
+    </div>
+  </div>
   
 </body>
 </html>
